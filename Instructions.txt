@@ -1,0 +1,94 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Version 1
+Author: Aniket Narendra Patil 
+E-mail: contact.aniketpatil@gmail.com
+Mobile: +1 585 537 9497
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Instructions:
+Postman has been used to carry out the testing for GET, POST and PUT requests.
+The screenshots for the test cases are present in the folder having Path > Testing Screenshots
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--> Solution to the Coding Assessment with Test Cases:
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- (Provided Functionality Testing)
+
+
+--> Employee:
+
+
+a. Create Employee:
+
+POST URL: http://localhost:8080/employee
+
+JSON: 
+{"firstName":"Alex","lastName":"Hales","position":"Senior Developer","department":"Software","directReports":null}
+
+--> this results in a unique_employee_id to be generated.
+--> copy this unique_employee_id and replace it where required.
+
+
+b. Read Employee:
+
+GET URL: http://localhost:8080/employee/unique_employee_id
+
+
+c. Update Employee:
+
+PUT URL: localhost:8080/employee/new_employee_id
+
+JSON: 
+{
+    "employeeId": "unique_employee_id",
+    "firstName": "Alex",
+    "lastName": "Hales",
+    "position": "Team Lead",
+    "department": "Project Management",
+    "directReports": null
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- (Implemented Functionality Testing)
+
+
+--> Solution to Task 1
+
+
+-- Reporting Structure:
+
+
+a. Read Reporting Structure
+
+GET URL: http://localhost:8080/readNumberOfReports/16a596ae-edd3-4847-99fe-c4518e82c86f
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--> Solution to Task 2
+
+
+-- Compensation:
+
+
+a. Create Compensation
+
+POST URL: http://localhost:8080/compensation
+
+JSON:
+{"employee": {"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f"}, "salary":"42000.15", "effectiveDate":"1990-03-20"}
+
+
+b. Read Compensation
+
+GET URL: localhost:8080/compensation/16a596ae-edd3-4847-99fe-c4518e82c86f
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thank you for your time and consideration.
+
+-- End of File --
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

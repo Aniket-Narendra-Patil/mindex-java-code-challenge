@@ -21,7 +21,7 @@ public class EmployeeController {
         return employeeService.create(employee);
     }
 
-    @GetMapping("/employee/{id}")
+    @GetMapping(value = "/employee/{id}")
     public Employee read(@PathVariable String id) {
         LOG.debug("Received employee create request for id [{}]", id);
 
